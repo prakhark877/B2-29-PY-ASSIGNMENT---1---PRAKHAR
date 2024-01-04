@@ -1,19 +1,19 @@
 
 try:
-    file = open("doc.txt","w")
-    k1 = "Hello I am a file"
-    k2 =  "Where you need to return the data string"
-    k3 = "Which is of even length"
-    file.write(k1 + "\n")
-    file.write(k2 + "\n")
-    file.write(k3)
-    file.close()
+    fi = open("cmm.txt","w")
+    k1 = "Hello,how are you!"
+    k2 =  "Are you alright?"
+    k3 = "Can I help you?"
+    fi.write(k1 + "\n")
+    fi.write(k2 + "\n")
+    fi.write(k3)
+    fi.close()
 
-    file  = open("doc.txt","r")
-    word = file.read()
-    split_wo =word.split()
+    fi  = open("cmm.txt","r")
+    wo = fi.read()
+    split_word = wo.split()
     res = []
-    for e in split_wo:
+    for e in split_word:
         if len(e) % 2 == 0:
             res.append(e)
     ans = " ".join(res)
