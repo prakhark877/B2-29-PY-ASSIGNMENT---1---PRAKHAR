@@ -1,8 +1,8 @@
-def userdata( s):
-    new_s = s.split('0')
-    l = [ ele for ele in new_s if len(ele) !=0]
-    d = {"first_name" :  l[0] , "last_name":l[1] , "id":l[2]}
-    return d 
- 
-s = input()
-print(userdata(s))
+def func(tr):
+    new = tr.split('0')
+    ltr = [ e for e in new if len(e)!=0]
+    data = {"first_name" :  ltr[0] , "last_name":ltr[1] , "id":ltr[2]}
+    return data
+
+tr = input()
+print(func(tr))
