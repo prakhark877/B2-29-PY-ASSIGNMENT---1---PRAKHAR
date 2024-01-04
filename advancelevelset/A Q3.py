@@ -1,21 +1,20 @@
-def J(data):
-    try : 
+def func(text):
+    try :
         #write content in file
-        file = open("WORDS.txt","w" )
-        file.write(data)
-        file.close()
+        make = open("WORDS.txt","w" )
+        make.write(text)
+        make.close()
 
         #read
-        file = open("WORDS.txt","r")
-        con  = file.read()
-        res = "" 
-        con = con.replace("j","i")
-        con  = con.replace("J","I")
-        res += con
-        return res  
+        make = open("WORDS.txt","r")
+        cont  = make.read()
+        out = ""
+        cont = cont.replace("j","i")
+        cont  = cont.replace("J","I")
+        out += cont
+        return out
 
     except FileNotFoundError:
         return "file not found"
-data = input()
-print(J(data))
-    
+text = input()
+print(func(text))
