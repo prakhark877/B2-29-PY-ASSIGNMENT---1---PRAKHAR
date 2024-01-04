@@ -1,20 +1,20 @@
-def without_using_comp(n,s):
-    d = {}
-    cnt = 0
-    for ele in s:
-        if ele not in d:
-            if (len(d)>n):
-                cnt += 1 
-            d[ele] = 1
+def cmp(next,set):
+    data = {}
+    cntent = 0
+    for e in set:
+        if e not in data:
+            if (len(data)>next):
+                cntent += 1 
+            data[e] = 1
         else:
             # print(d)
-            if (len(d) >n):
-                cnt += 1
-                print(f"person is {ele}")
-            del d[ele]
+            if (len(data) > next):
+                cntent += 1
+                print(f"person is {e}")
+            del data[e]
             # print(d)
 
-    return cnt
-n = int(input())
-s = input()
-print(f"number of person without using the computer are: {without_using_comp(n,s)}")
+    return cntent
+next = int(input())
+set = input()
+print(f"number of person not using computer are : {cmp(next,set)}")
