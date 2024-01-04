@@ -1,13 +1,8 @@
-def student(name,subject):
-        # d  = {}
-        # for n,s in zip(name,subject):
-        #         if n not in d :
-        #             d[n] = s 
-        # return d 
-        return {n:s for n,s in zip( name, subject)}
+def func(na,sub): 
+        return {i:j for i,j in zip( na, sub)}
      
 
 
-name = input().split()
-subject = input().split()
-print(student(name, subject))
+na = input().split()
+sub = input().split()
+print(func(na,sub))
