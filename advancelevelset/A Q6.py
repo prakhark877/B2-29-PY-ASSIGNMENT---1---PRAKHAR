@@ -1,52 +1,57 @@
 #single inheritance
-class College: 
-    def College_detail(self):
-        print("I am from College")
-class Student(College):
-    def student_detail( self):
-        print("I am from Student")
+class Animal:
+    def speak(self):
+        print("Animal speaks")
 
+class Dog(Animal):
+    def bark(self):
+        print("Dog barks")
 
-b = Student()
-b.student_detail()
-b.College_detail()
+# Create an instance of Dog
+my_dog = Dog()
+
+# Access methods from both Animal and Dog classes
+my_dog.speak()  # Output: Animal speaks
+my_dog.bark()   # Output: Dog barks
 
 #multiple inheritance
-class First:
-    def __init__(self,first):
-        self.first =first 
+class Flyable:
+    def fly(self):
+        print("Can fly")
 
-class Second:
-    def __init__(self,second):
-        self.second = second 
-    
-class Add ( First, Second):
-    def __init__(self,first,second ):
-        First.__init__(self,first)
-        Second.__init__(self,second)
-    
-    def addition(self):
-        print(self.first + self.second)
-res = Add(1,3)
-res.addition()
+class Swimable:
+    def swim(self):
+        print("Can swim")
 
+class Duck(Flyable, Swimable):
+    def quack(self):
+        print("Duck quacks")
 
-#multilevel
-class GrandParentCompany:
-    def __init__(self,grand_name):
-        self.grand_name = grand_name 
+# Create an instance of Duck
+my_duck = Duck()
 
-class ParentCompany(GrandParentCompany):
-    def __init__(self,par_name,grand_name):
-        self.par_name = par_name 
-        GrandParentCompany.__init__(self,grand_name)
+# Access methods from Flyable, Swimable, and Duck classes
+my_duck.fly()    # Output: Can fly
+my_duck.swim()   # Output: Can swim
+my_duck.quack()  # Output: Duck quacks
 
-class ChildCompany( ParentCompany):
-    def __init__(self,grad_name,par_name,child_name):
-        self.child_name = child_name 
-        ParentCompany.__init__(self,par_name,grad_name)
-    def print_detail(self):
-        print(f"Grand Parent Company : {self.grand_name} Parent Company: {self.par_name} Child Company: {self.child_name}")
+#multilevel inheritance
+class Animal:
+    def speak(self):
+        print("Animal speaks")
 
-c = ChildCompany("Alphabet","Google","Chrome")
-c.print_detail()
+class Dog(Animal):
+    def bark(self):
+        print("Dog barks")
+
+class Labrador(Dog):
+    def fetch(self):
+        print("Labrador fetches")
+
+# Create an instance of Labrador
+my_labrador = Labrador()
+
+# Access methods from Animal, Dog, and Labrador classes
+my_labrador.speak()  # Output: Animal speaks
+my_labrador.bark()   # Output: Dog barks
+my_labrador.fetch()  # Output: Labrador fetches
